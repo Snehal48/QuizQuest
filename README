@@ -1,0 +1,72 @@
+markdown 
+# QuizQuest 
+ 
+QuizQuest is a dynamic web-based quiz application designed to test users' knowledge across various topics. Built with Node.js for the backend and MySQL for data storage, the application delivers questions to users and updates their scores in real-time for each correct answer. 
+ 
+## Overview 
+ 
+QuizQuest architecture comprises a Node.js backend that communicates with a MySQL database to manage quiz questions and user scores. The backend handles API requests to retrieve questions and update scores, while the frontend is responsible for displaying questions and scores to the user. The project utilizes the following technologies: 
+ 
+- **Node.js**: A JavaScript runtime for building the backend of the application. 
+- **MySQL**: A relational database management system used to store quiz questions and user scores. 
+- **Express**: A web server framework for Node.js to handle HTTP requests. 
+- **mysql**: A Node.js driver for connecting to the MySQL database. 
+- **body-parser**: Middleware for parsing incoming request bodies. 
+- **cors**: Middleware to enable Cross-Origin Resource Sharing in Express. 
+ 
+The current project structure includes: 
+- `server.js`: Sets up the server, configures middleware, connects to the MySQL database, and defines a basic route. 
+ 
+## Features 
+ 
+- Displays quiz questions to users. 
+- Increments user score for each correct answer. 
+- Stores and retrieves quiz questions and user scores from a MySQL database. 
+- Provides a simple API endpoint to confirm the server is running. 
+ 
+## Getting started 
+ 
+### Requirements 
+ 
+To run QuizQuest, ensure you have the following installed on your computer: 
+- Node.js 
+- MySQL 
+ 
+### Quickstart 
+ 
+1. **Clone the repository**: 
+   ``` 
+   git clone <repository-url> 
+   cd quizquest 
+   ``` 
+ 
+2. **Install dependencies**: 
+   ``` 
+   npm install express 
+   npm install mysql 
+   npm install body-parser 
+   npm install cors 
+   ``` 
+ 
+3. **Configure the database connection**: 
+   - Open `server.js` and replace the placeholders with your MySQL credentials: 
+     ```javascript 
+     const db = mysql.createConnection({ 
+       host: 'localhost', 
+       user: 'your-username', // Replace with your MySQL username 
+       password: 'your-password', // Replace with your MySQL password 
+       database: 'quizquest' // Ensure this matches your database name 
+     }); 
+     ``` 
+ 
+4. **Start the server**: 
+   ``` 
+   node server.js 
+   ``` 
+ 
+5. **Access the application**: 
+   - Open your web browser and navigate to `http://localhost:3000` to confirm the server is running. 
+ 
+### License 
+ 
+Copyright (c) 2024. 
